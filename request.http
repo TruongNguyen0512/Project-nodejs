@@ -1,0 +1,75 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Itachi",
+    "password": "Uchiha" 
+}
+
+###
+
+POST http://localhost:3000/api/auth/login 
+Content-Type: application/json  
+
+{
+    
+    "username": "Itachi",
+    "password": "Uchiha" 
+}
+
+###  
+POST http://localhost:3000/api/post 
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDM0OTY4NTN9.wvHl68Mb_aigtfX8PA2W2cc_ySp2m_MXhTVWVKYONvo
+
+{
+    "title" : "Learn how to think sharp",
+    "description": "Controll your mind , controll your life",
+    "url":"github.com",
+    "status" : "LEARNING"
+}
+
+### 
+POST http://localhost:3000/api/post 
+Content-Type :  application/json  
+Authorization  :  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDM0OTUzNjV9.7L6QdeV17yeCuv3xxf9fKY5uRTiri2ZWycQPXhuGNic
+
+{
+    "title" : "Node Js",
+    "description": "How to learn fastly Node.js in 3 week",
+    "url":"Node.com",
+    "status" : "LEARNING"
+}
+
+### 
+GET http://localhost:3000/api/post  
+Authorization  :  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDM0OTY4NTN9.wvHl68Mb_aigtfX8PA2W2cc_ySp2m_MXhTVWVKYONvo
+
+### 
+
+PUT http://localhost:3000/api/post/6589d4f9dc8133186ec6dac2
+Content-Type: application/json  
+Authorization  :  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDM1MzE3NDd9.KT73v4voDzVSJ2cwDwJi1mU1n9qwEbngHL5Hc_QpxPY
+
+{
+    "title" : "uchiha update " , 
+    "description" : "The real shinobi of Konoha" ,
+    "url" : "konoha/uchiha/itachi.io" , 
+    "status" :  "LEARNING"
+}
+### 
+
+POST http://localhost:3000/api/post     
+Content-Type: application/json 
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDM1MzE1NzR9.-XR-ANAIVe8Qlo0XjQjbHU2rqFKUT_NuKFdo7FEyrGM 
+
+{
+    "title" : "My life",
+    "description": "Really hard truth about itachi 's life",
+    "url":"uchiha.com",
+    "status" : "LEARNING"
+}  
+
+### 
+DELETE http://localhost:3000/api/post/6589d4f9dc8133186ec6dac2
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDM1MzE1NzR9.-XR-ANAIVe8Qlo0XjQjbHU2rqFKUT_NuKFdo7FEyrGM 
